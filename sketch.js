@@ -1,12 +1,18 @@
-const container = document.querySelector(".grid");
-const squareEL = document.createElement("div");
-squareEL.classList.add("board");
-container.appendChild(squareEL);
+const containerEL = document.querySelector(".container");
+
+let multiplyNumber = 16;
+
+function getSquares(number) {
+  totalSquares = number * number;
+  return totalSquares;
+}
 
 function makeGrid() {
-  for (let i = 1; i < 16; i++) {
+  let gridSize = getSquares(multiplyNumber);
+  for (let i = 0; i < gridSize; i++) {
     let square = document.createElement("div");
-    container.appendChild(square).classList.add("board");
+    containerEL.appendChild(square).classList.add("board");
+    containerEL.style.cssText = `--sketch-size: ${multiplyNumber}`;
   }
 }
 makeGrid();
