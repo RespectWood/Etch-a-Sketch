@@ -17,15 +17,13 @@ body{
 }
 .board{
     background-color: white;
-    border: 0.1px solid rgba(0, 0, 0, 0.8);
+    border: none;
     padding: 0px;
     
     
 
 }
 
-.brush{
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
+.slider{
+    width: 50%;
 }

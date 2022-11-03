@@ -1,7 +1,19 @@
 const containerEL = document.querySelector(".container");
-let canvasSize = 16;
+const sliderEL = document.getElementById("slider");
+const displaySize = document.getElementById("canvas-size");
 
-// Create columns/rows for sketchboard.
+let canvasSize = 32;
+
+// slider for canvas size
+
+displaySize.innerText = sliderEL.value;
+
+sliderEL.oninput = function () {
+  displaySize.innerText = this.value;
+  canvasSize = this.value;
+};
+
+// Create columns & rows for canvas.
 
 function makeGrid() {
   let gridSize = getSquares(canvasSize);
