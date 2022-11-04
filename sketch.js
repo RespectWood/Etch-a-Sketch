@@ -1,10 +1,8 @@
 const containerEL = document.querySelector(".container");
 const sliderEL = document.getElementById("slider");
-const displaySize = document.getElementById("canvas-size");
+const showSliderValue = document.getElementById("canvas-size");
 
-// slider for canvas size
-
-makeCanvas(64);
+makeCanvas(50);
 
 function makeCanvas(canvasSize) {
   let size = Number(canvasSize) * Number(canvasSize);
@@ -22,14 +20,14 @@ function makeCanvas(canvasSize) {
 
 // Slider functionality
 
-displaySize.innerText = sliderEL.value; // show initial slider value
+showSliderValue.innerText = sliderEL.value; // show initial slider value
 
 sliderEL.addEventListener("mouseup", changeCanvasSize); // Change size of canvas
 
 // display current slider value
 
 sliderEL.oninput = function () {
-  displaySize.innerText = this.value;
+  showSliderValue.innerText = this.value;
 };
 
 // remove childnodes & reset Canvas
@@ -38,5 +36,5 @@ function changeCanvasSize() {
     item.remove();
   });
   canvasSize = sliderEL.value; // attach slidervalue to canvasSize variable
-  makeCanvas(canvasSize); // invoke makeGrid with current Slider-value
+  makeCanvas(canvasSize); // invoke makeCanvas with current slider-value
 }
