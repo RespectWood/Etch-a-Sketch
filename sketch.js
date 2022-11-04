@@ -2,7 +2,7 @@ const containerEL = document.querySelector(".container");
 const sliderEL = document.getElementById("slider");
 const showSliderValue = document.getElementById("canvas-size");
 
-makeCanvas(50);
+makeCanvas(32);
 
 function makeCanvas(canvasSize) {
   let size = Number(canvasSize) * Number(canvasSize);
