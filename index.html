@@ -10,23 +10,24 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-<div class="border-box">
-    <div class="menu-bar">
-        <input type="color" id="color-selector" value="#00FFFF">
-        <label for="color-selector">Color Picker</label>
-        <button class="pencil" id="eraser">Eraser</button>
-        <button class="pencil" id="pencilbtn">Pencil</button>
+    <header class="header">
+        <h1>Neon-Sketch</h1>
+    </header>
+    <div class="main-container">
+        <div class="menu-bar">
+            <input type="color" id="color-selector" value="#00FFFF">
+            <button class="eraser" id="eraser">Eraser</button>
+            <button class="pencil" id="pencilbtn">Pencil</button>
 
-        <div class="slide-container">
-            <input type="range" min="8" max="64" value="32" id="slider" autocomplete="off">
-                <p>
-                Canvas Size: <span id="canvas-size"></span>
-                </p>
+            <div class="slide-container">
+                <input type="range" min="8" max="64" value="32" id="slider" autocomplete="off">
+                    <p>
+                    size: <span id="canvas-size"></span>
+                    </p>
+            </div>
         </div>
-    </div>
-
-    <div class="container">
-    </div>
-</div>
+        <div class="container">
+        </div>
+    </div
 </body>
 </html>

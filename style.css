@@ -1,8 +1,17 @@
-
+.header{
+    box-sizing: border-box;
+    text-align: center;
+    padding-top:25px;
+    padding-bottom:25px;
+    font-size: 30px;
+    font-family: Impact, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans-serif;
+}
 
 body{
-    display: grid;
-    justify-content: center;
+    line-height: 1.6;
+    margin-bottom: 100px;
+    /* justify-content: center;
+    align-items: center; */
    
 }
 
@@ -13,15 +22,13 @@ body{
 
 .container{
     display: grid;
-    margin-top: 200px;
+    box-sizing: border-box;
     height: 500px;
     width: 500px;
     grid-template-rows:    repeat(var(--canvas-size), 1fr);
     grid-template-columns: repeat(var(--canvas-size), 1fr);
     background-color: #656565;
-    padding: 1px;
     box-shadow: 0px 0px 15px -1px rgba(100, 210, 184, 0.47); 
-    border-width: px;
 
     
 }
@@ -30,42 +37,54 @@ body{
 }
 
 .slide-container{
+    text-align: center;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    max-width: 100%;
+    width: 25rem;
+    
+}
 
-    width: 50%;
-    margin-top: 700px;
+
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
 .menu-bar{
-    margin-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
+    width: 200px;
+
+
+ 
 }
 
-
-/* #eraser{
-    width: 65px;
-    height: 70px;
-
-    border-style: solid;
-    border-color: rgba(221, 72, 224, 0.227);
-    text-align: center;
-    margin-left: 1rem;
-    margin: 50px;
-    padding-bottom: 0%;
-} */
 
 .pencil{
     width: 65px;
     height: 70px;
-
-    border-style: solid;
-    border-color: rgba(221, 72, 224, 0.227);
+    border-style: none;
+    border-color: rgba(65, 181, 96, 0.6);
     text-align: center;
-    margin-left: 1rem;
-    margin: 50px;
-    padding-bottom: 0%;
+    
+}
+.eraser{
+    width: 65px;
+    height: 70px;
+    border-style: none;
+    border-color: rgba(65, 181, 96, 0.6);
+    text-align: center;
+    
 }
 
 #color-selector{

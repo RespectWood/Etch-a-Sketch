@@ -5,31 +5,30 @@ const showSliderValue = document.getElementById("canvas-size");
 // color buttons
 
 let colorChoice = "#00FFFF";
-let pencilChoice = "";
+let pencilChoice = colorChoice;
 
 const pencilEL = document.getElementById("pencilbtn");
-const babyGreenEL = document.getElementById("color2");
 const eraserEL = document.getElementById("eraser");
 const colorPickerEL = document.getElementById("color-selector");
 
-colorPickerEL.addEventListener("input", updateFirst, false);
+// dynamic colorpicker
+
+colorPickerEL.addEventListener("input", initializeColor, false);
 colorPickerEL.addEventListener("change", watchColorPicker, false);
 
-function updateFirst(event) {
+function initializeColor(event) {
   colorChoice = event.target.value;
 }
 
 function watchColorPicker(event) {
   colorChoice = event.target.value;
+  pencilChoice = event.target.value;
 }
 
+// pencil button
 pencilEL.onclick = () => {
-  pencilChoice = colorChoice;
+  colorChoice = pencilChoice;
 };
-
-// babyGreenEL.onclick = () => {
-//   colorChoice = "#b3ff99";
-// };
 
 eraserEL.onclick = () => {
   colorChoice = "#ffffff";
