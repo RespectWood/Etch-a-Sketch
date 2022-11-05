@@ -2,9 +2,10 @@
 body{
     display: grid;
     justify-content: center;
+    
 }
 .container{
-    margin-top: 150px;
+    margin-top: 30px;
     display: grid;
     height: 500px;
     width: 500px;
@@ -19,14 +20,52 @@ body{
 }
 .board{
     background-color: white;
-
- 
-   
-    
-    
-
 }
 
 .slider{
+
     width: 50%;
+}
+
+
+.menu-bar{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#color1{
+    width: 100px;
+    height: 50px;
+    border-style: solid;
+    border-color: rgba(221, 72, 224, 0.227);
+    text-align: center;
+    margin-left: 1rem;
+    margin: 0%;
+    padding-bottom: 0%;
+}
+
+#color2{
+    width: 100px;
+    height: 50px;
+
+    border-style: solid;
+    border-color: rgba(221, 72, 224, 0.227);
+    text-align: center;
+    margin-left: 1rem;
+    margin: 0%;
+    padding-bottom: 0%;
+}
+
+#eraser{
+    width: 100px;
+    height: 50px;
+
+    border-style: solid;
+    border-color: rgba(221, 72, 224, 0.227);
+    text-align: center;
+    margin-left: 1rem;
+    margin: 0%;
+    padding-bottom: 0%;
 }

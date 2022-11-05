@@ -2,20 +2,55 @@ const containerEL = document.querySelector(".container");
 const sliderEL = document.getElementById("slider");
 const showSliderValue = document.getElementById("canvas-size");
 
+// color buttons
+
+let colorChoice = "pink";
+
+const mandarinEL = document.getElementById("color1");
+const babyGreenEL = document.getElementById("color2");
+const eraserEL = document.getElementById("eraser");
+
+mandarinEL.onclick = () => {
+  colorChoice = "#ffcc99";
+};
+
+babyGreenEL.onclick = () => {
+  colorChoice = "#b3ff99";
+};
+
+eraserEL.onclick = () => {
+  colorChoice = "#ffffff";
+};
+
 makeCanvas(32);
 
 function makeCanvas(canvasSize) {
   let size = Number(canvasSize) * Number(canvasSize);
   containerEL.style.cssText = `--canvas-size: ${canvasSize}`;
+
   for (let i = 0; i < size; i++) {
     let square = document.createElement("div");
-    containerEL.appendChild(square).classList.add("board");
+    square.classList.add("board");
+    square.addEventListener("mouseover", setColor);
+    square.addEventListener("mousedown", setColor);
+    containerEL.appendChild(square);
   }
-  document.querySelectorAll(".board").forEach((item) => {
-    item.addEventListener("mouseover", (e) => {
-      e.target.style.backgroundColor = "pink";
-    });
-  });
+}
+
+// only paint on mouseIsDown = true
+let mouseIsDown = false;
+
+// change boolean variable on action
+containerEL.onmousedown = () => {
+  mouseIsDown = true;
+};
+containerEL.onmouseup = () => {
+  mouseIsDown = false;
+};
+
+function setColor(e) {
+  if (e.type === "mouseover" && !mouseIsDown) return; // if mouseIsDown = false, stop painting.
+  e.target.style.backgroundColor = colorChoice;
 }
 
 // Slider functionality
@@ -31,6 +66,7 @@ sliderEL.oninput = function () {
 };
 
 // remove childnodes & reset Canvas
+
 function changeCanvasSize() {
   document.querySelectorAll(".board").forEach((item) => {
     item.remove();
