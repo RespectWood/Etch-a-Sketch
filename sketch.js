@@ -5,8 +5,9 @@ const showSliderValue = document.getElementById("canvas-size");
 // color buttons
 
 let colorChoice = "#00FFFF";
+let pencilChoice = "";
 
-const mandarinEL = document.getElementById("color1");
+const pencilEL = document.getElementById("pencilbtn");
 const babyGreenEL = document.getElementById("color2");
 const eraserEL = document.getElementById("eraser");
 const colorPickerEL = document.getElementById("color-selector");
@@ -22,9 +23,9 @@ function watchColorPicker(event) {
   colorChoice = event.target.value;
 }
 
-// mandarinEL.onclick = () => {
-//   colorChoice = "#ffcc99";
-// };
+pencilEL.onclick = () => {
+  pencilChoice = colorChoice;
+};
 
 // babyGreenEL.onclick = () => {
 //   colorChoice = "#b3ff99";

@@ -44,7 +44,19 @@ body{
 }
 
 
-#eraser{
+/* #eraser{
+    width: 65px;
+    height: 70px;
+
+    border-style: solid;
+    border-color: rgba(221, 72, 224, 0.227);
+    text-align: center;
+    margin-left: 1rem;
+    margin: 50px;
+    padding-bottom: 0%;
+} */
+
+.pencil{
     width: 65px;
     height: 70px;
 
