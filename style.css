@@ -1,12 +1,19 @@
 
+
 body{
     display: grid;
     justify-content: center;
-    
+   
 }
+
+.border-box{
+    display: flex;
+
+}
+
 .container{
-    margin-top: 30px;
     display: grid;
+    margin-top: 200px;
     height: 500px;
     width: 500px;
     grid-template-rows:    repeat(var(--canvas-size), 1fr);
@@ -22,9 +29,10 @@ body{
     background-color: white;
 }
 
-.slider{
+.slide-container{
 
     width: 50%;
+    margin-top: 700px;
 }
 
 
@@ -35,37 +43,22 @@ body{
     justify-content: center;
 }
 
-#color1{
-    width: 100px;
-    height: 50px;
-    border-style: solid;
-    border-color: rgba(221, 72, 224, 0.227);
-    text-align: center;
-    margin-left: 1rem;
-    margin: 0%;
-    padding-bottom: 0%;
-}
-
-#color2{
-    width: 100px;
-    height: 50px;
-
-    border-style: solid;
-    border-color: rgba(221, 72, 224, 0.227);
-    text-align: center;
-    margin-left: 1rem;
-    margin: 0%;
-    padding-bottom: 0%;
-}
 
 #eraser{
-    width: 100px;
-    height: 50px;
+    width: 65px;
+    height: 70px;
 
     border-style: solid;
     border-color: rgba(221, 72, 224, 0.227);
     text-align: center;
     margin-left: 1rem;
-    margin: 0%;
+    margin: 50px;
     padding-bottom: 0%;
+}
+
+#color-selector{
+    padding: 0px;
+    width: 65px;
+    height: 70px;
+    border-style: none;
 }

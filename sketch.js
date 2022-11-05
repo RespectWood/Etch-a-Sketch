@@ -4,19 +4,31 @@ const showSliderValue = document.getElementById("canvas-size");
 
 // color buttons
 
-let colorChoice = "pink";
+let colorChoice = "#00FFFF";
 
 const mandarinEL = document.getElementById("color1");
 const babyGreenEL = document.getElementById("color2");
 const eraserEL = document.getElementById("eraser");
+const colorPickerEL = document.getElementById("color-selector");
 
-mandarinEL.onclick = () => {
-  colorChoice = "#ffcc99";
-};
+colorPickerEL.addEventListener("input", updateFirst, false);
+colorPickerEL.addEventListener("change", watchColorPicker, false);
 
-babyGreenEL.onclick = () => {
-  colorChoice = "#b3ff99";
-};
+function updateFirst(event) {
+  colorChoice = event.target.value;
+}
+
+function watchColorPicker(event) {
+  colorChoice = event.target.value;
+}
+
+// mandarinEL.onclick = () => {
+//   colorChoice = "#ffcc99";
+// };
+
+// babyGreenEL.onclick = () => {
+//   colorChoice = "#b3ff99";
+// };
 
 eraserEL.onclick = () => {
   colorChoice = "#ffffff";
