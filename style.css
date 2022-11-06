@@ -1,5 +1,7 @@
 :root{
     background-color: #FDEEDC;
+    font-family: 'MuseoModerno', cursive;
+    font-style: regular;
 }
 
 .header{
@@ -8,7 +10,6 @@
     padding-top:25px;
     padding-bottom:25px;
     font-size: 25px;
-    font-family: Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans-serif;
 }
 
 body{
@@ -38,10 +39,12 @@ body{
 }
 
 .slide-container{
+    padding-top: 10px;
     text-align: center;
     border-radius: 0rem;
     max-width: 100%;
     width: 100px;
+
     
 }
 
@@ -52,7 +55,12 @@ body{
     background: none;
     border-radius: 5px;
     height: 15px;
+    background-color: #00666625;
 
+
+}
+.slider:hover{
+  background-color: #00666635;
 }
 
 .slider::-webkit-slider-thumb {
@@ -84,6 +92,11 @@ body{
     margin: 0 auto;
 }
 
+.pixel-text{
+    margin-bottom: 0px;
+margin-top: 0px;
+}
+
 
 .menu-bar{
     display: flex;
@@ -92,8 +105,9 @@ body{
     justify-content: center;
     gap: 50px;
     width: 200px;
-    margin-top: 50px;
     margin-left: 90px;
+    margin-top: 0px;
+    margin-bottom: 80px;
     
 
 }
@@ -129,6 +143,11 @@ body{
 .footer{
     justify-content: center;
     text-align: center;
-    padding-top: 70px;
 
+
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
 }

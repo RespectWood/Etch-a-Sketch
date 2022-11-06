@@ -9,6 +9,7 @@ let pencilChoice = colorChoice;
 
 const pencilEL = document.getElementById("pencilbtn");
 const eraserEL = document.getElementById("eraser");
+const clearEL = document.getElementById("clear");
 const colorPickerEL = document.getElementById("color-selector");
 
 // dynamic colorpicker
@@ -32,6 +33,12 @@ pencilEL.onclick = () => {
 
 eraserEL.onclick = () => {
   colorChoice = "#ffffff";
+};
+
+clearEL.onclick = () => {
+  document.querySelectorAll(".board").forEach((item) => {
+    item.style.backgroundColor = "#ffffff";
+  });
 };
 
 makeCanvas(32);
@@ -67,14 +74,14 @@ function setColor(e) {
 
 // Slider functionality
 
-showSliderValue.innerText = sliderEL.value; // show initial slider value
+showSliderValue.innerText = `${sliderEL.value}px`; // show initial slider value
 
 sliderEL.addEventListener("mouseup", changeCanvasSize); // Change size of canvas
 
 // display current slider value
 
 sliderEL.oninput = function () {
-  showSliderValue.innerText = this.value;
+  showSliderValue.innerText = `${this.value}px`;
 };
 
 // remove childnodes & reset Canvas
