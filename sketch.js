@@ -1,10 +1,10 @@
 const containerEL = document.querySelector(".container");
-const sliderEL = document.getElementById("slider");
+const sliderEL = document.querySelector(".slider");
 const showSliderValue = document.getElementById("canvas-size");
 
 // color buttons
 
-let colorChoice = "#00FFFF";
+let colorChoice = "#006666";
 let pencilChoice = colorChoice;
 
 const pencilEL = document.getElementById("pencilbtn");

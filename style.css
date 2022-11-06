@@ -1,18 +1,19 @@
+:root{
+    background-color: #FDEEDC;
+}
+
 .header{
     box-sizing: border-box;
     text-align: center;
     padding-top:25px;
     padding-bottom:25px;
-    font-size: 30px;
-    font-family: Impact, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans-serif;
+    font-size: 25px;
+    font-family: Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans-serif;
 }
 
 body{
     line-height: 1.6;
     margin-bottom: 100px;
-    /* justify-content: center;
-    align-items: center; */
-   
 }
 
 .border-box{
@@ -28,7 +29,7 @@ body{
     grid-template-rows:    repeat(var(--canvas-size), 1fr);
     grid-template-columns: repeat(var(--canvas-size), 1fr);
     background-color: #656565;
-    box-shadow: 0px 0px 15px -1px rgba(100, 210, 184, 0.47); 
+    box-shadow: 0px 0px 15px -1px #f1a76134; 
 
     
 }
@@ -38,20 +39,47 @@ body{
 
 .slide-container{
     text-align: center;
-    border-radius: 0.4rem;
-    cursor: pointer;
+    border-radius: 0rem;
     max-width: 100%;
-    width: 25rem;
+    width: 100px;
     
 }
 
+.slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 65px;
+    background: none;
+    border-radius: 5px;
+    height: 15px;
 
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    border-radius: 50%; 
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    border-radius: 0%;
+    background: #006666; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .slider::-moz-range-thumb:hover{
+    background: #F1A661;
+  }
 
 .main-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 100px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -62,29 +90,31 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 50px;
     width: 200px;
+    margin-top: 50px;
+    margin-left: 90px;
+    
 
-
- 
 }
 
 
-.pencil{
+.menu-buttons{
+    background-color: #F1A661;
     width: 65px;
     height: 70px;
     border-style: none;
-    border-color: rgba(65, 181, 96, 0.6);
     text-align: center;
+    font-size: 26px;
+    padding: 0px;
+    cursor: pointer;
+
     
 }
-.eraser{
-    width: 65px;
-    height: 70px;
-    border-style: none;
-    border-color: rgba(65, 181, 96, 0.6);
-    text-align: center;
-    
+
+.menu-buttons:hover{
+    background-color: #E38B29;
+
 }
 
 #color-selector{
@@ -92,4 +122,13 @@ body{
     width: 65px;
     height: 70px;
     border-style: none;
+    cursor: pointer;
+}
+
+
+.footer{
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px;
+
 }
