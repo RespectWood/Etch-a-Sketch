@@ -12,7 +12,7 @@ const eraserEL = document.getElementById("eraser");
 const clearEL = document.getElementById("clear");
 const colorPickerEL = document.getElementById("color-selector");
 
-// dynamic colorpicker
+// colorpicker
 
 colorPickerEL.addEventListener("input", initializeColor, false);
 colorPickerEL.addEventListener("change", watchColorPicker, false);
