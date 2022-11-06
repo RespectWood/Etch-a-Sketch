@@ -2,14 +2,16 @@
     background-color: #FDEEDC;
     font-family: 'MuseoModerno', cursive;
     font-style: regular;
+    
 }
 
 .header{
     box-sizing: border-box;
     text-align: center;
     padding-top:25px;
-    padding-bottom:25px;
-    font-size: 25px;
+    padding-bottom: 0px;
+    font-size: 38px;
+    color: black;
 }
 
 
@@ -141,6 +143,7 @@ margin-top: 0px;
     font-size: 26px;
     padding: 0px;
     cursor: pointer;
+    color: black;
 
     
 }
@@ -162,6 +165,8 @@ margin-top: 0px;
 .footer{
     justify-content: center;
     text-align: center;
+    margin-top: 0px;
+    padding-top: 10px;
 
 
 }
